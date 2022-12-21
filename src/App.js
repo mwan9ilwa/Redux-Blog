@@ -1,23 +1,28 @@
-import React from "react";
+import React from 'react'
 import {
   BrowserRouter as Router,
-  Routes,
   Route,
+  Routes,
   Navigate,
-} from "react-router-dom";
+} from 'react-router-dom'
 
+import { Navbar } from './components/Navbar'
 import DashboardPage from './pages/DashboardPage'
 import PostsPage from './pages/PostsPage'
+import SinglePostPage from './pages/SinglePostPage'
 
 const App = () => {
   return (
     <Router>
+      <Navbar />
       <Routes>
         <Route exact path="/" component={DashboardPage} />
         <Route exact path="/posts" component={PostsPage} />
+        <Route exact path="/posts/:id" component={SinglePostPage} />
         <Navigate to="/" />
       </Routes>
     </Router>
-  );
-};
-export default App;
+  )
+}
+
+export default App

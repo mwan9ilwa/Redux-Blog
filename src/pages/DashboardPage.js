@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 const DashboardPage = () => (
   <section>
@@ -9,6 +9,6 @@ const DashboardPage = () => (
       View Posts
     </Link>
   </section>
-);
+)
 
-export default DashboardPage;
+export default DashboardPage
